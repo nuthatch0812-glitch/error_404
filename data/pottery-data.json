@@ -1,0 +1,224 @@
+{
+  "potters": [
+    {
+      "id": 1,
+      "name": "이삼평",
+      "koreanName": "Yi Sam-pyeong",
+      "lifeSpan": "1647-1734",
+      "origin": "조선",
+      "period": "17세기 중후반",
+      "contribution": "아리타 자기의 기초 개척자, 색채 문양 기법 발전",
+      "representative_work": "빨간 문양 자기",
+      "birthplace": "조선 전라도",
+      "deathplace": "아리타",
+      "biography": "조선에서 도공으로 활동하다가 임진왜란 이후 도일한 도공 중 한 명. 규슈의 가라쓰를 거쳐 아리타에 정착하여 본격적인 도자 생산을 시작했습니다.",
+      "image": "images/potters/yi-sam-pyeong.jpg",
+      "influence": "high"
+    },
+    {
+      "id": 2,
+      "name": "사카이다 가쿠에몬",
+      "koreanName": "Sakaida Kakiemon",
+      "lifeSpan": "1596-1666",
+      "origin": "일본 규슈",
+      "period": "17세기",
+      "contribution": "아리타 도자의 상용화 및 해외 수출 확대",
+      "representative_work": "칠보자기(나라시키데),적회자기",
+      "birthplace": "규슈 아리타",
+      "deathplace": "아리타",
+      "biography": "아리타에서 태어나 도자 사업을 확장한 도공. 조선 도공들의 기술을 습득하고 독자적인 스타일을 개발했습니다.",
+      "image": "images/potters/sakaida-kakiemon.jpg",
+      "influence": "high"
+    },
+    {
+      "id": 3,
+      "name": "기타에이 도쿠자에몬",
+      "koreanName": "Kitaei Tokuza-emon",
+      "lifeSpan": "1623-1689",
+      "origin": "일본 규슈",
+      "period": "17세기",
+      "contribution": "도자 기법의 표준화 및 질 관리 시스템 구축",
+      "representative_work": "청화백자, 적화자기",
+      "birthplace": "규슈 아리타",
+      "deathplace": "아리타",
+      "biography": "도자 생산 체계를 과학적으로 정리한 도공. 조선 기술과 일본 미의식을 융합하는 데 주력했습니다.",
+      "image": "images/potters/kitaei-tokuzaemon.jpg",
+      "influence": "medium"
+    },
+    {
+      "id": 4,
+      "name": "도킹자에몬 9대",
+      "koreanName": "Tokuza-emon IX",
+      "lifeSpan": "1651-1722",
+      "origin": "일본 규슈",
+      "period": "17세기 말-18세기 초",
+      "contribution": "아리타 자기의 국제적 명성 정립",
+      "representative_work": "수출용 고급 자기",
+      "birthplace": "아리타",
+      "deathplace": "아리타",
+      "biography": "아리타 자기를 유럽 시장에 본격 수출한 인물. 조선 도공들의 전통을 계승하면서도 유럽 취향에 맞는 자기를 만들었습니다.",
+      "image": "images/potters/tokuza-emon-9th.jpg",
+      "influence": "high"
+    },
+    {
+      "id": 5,
+      "name": "석우",
+      "koreanName": "Seok-woo",
+      "lifeSpan": "1660-1730",
+      "origin": "조선",
+      "period": "17세기 말-18세기 초",
+      "contribution": "약재 용 자기, 제약용 용기 개발",
+      "representative_work": "의약용 청화자기",
+      "birthplace": "조선",
+      "deathplace": "아리타",
+      "biography": "조선에서 건너온 도공으로 의약용 도자기 생산을 전문화. 아리타 자기의 다양한 용도 개발에 기여했습니다.",
+      "image": "images/potters/seok-woo.jpg",
+      "influence": "medium"
+    },
+    {
+      "id": 6,
+      "name": "임나",
+      "koreanName": "Im-na",
+      "lifeSpan": "1665-1735",
+      "origin": "조선",
+      "period": "17세기 말-18세기 초",
+      "contribution": "색채 문양 기법 발전 및 전승",
+      "representative_work": "적회자기, 다색자기",
+      "birthplace": "조선 진안",
+      "deathplace": "아리타",
+      "biography": "이삼평의 기법을 계승하고 발전시킨 도공. 색채 문양의 정교함으로 유명했으며 많은 제자를 양성했습니다.",
+      "image": "images/potters/im-na.jpg",
+      "influence": "medium"
+    }
+  ],
+  "potteryStyles": [
+    {
+      "id": 1,
+      "name": "청화백자 (Blue and White)",
+      "koreanName": "청화백자",
+      "characteristics": "백색 자기 위에 파란색 안료로 문양을 그린 스타일",
+      "period": "17세기 초-현재",
+      "origin": "조선 기술 기반",
+      "imagePath": "images/styles/bluewhite.jpg",
+      "colorPalette": ["#FFFFFF", "#002B7E", "#8B7355"],
+      "technique": "손으로 그린 청색 안료",
+      "description": "조선의 청화백자 기술이 아리타에 전해져 발전한 스타일. 고급스럽고 우아한 느낌으로 유럽에도 많이 수출되었습니다."
+    },
+    {
+      "id": 2,
+      "name": "적회자기 (Red Overglaze)",
+      "koreanName": "적회자기",
+      "characteristics": "흰 자기 위에 금색, 초록색, 적색을 칠해 장식",
+      "period": "17세기 중반-18세기",
+      "origin": "조선 기술 발전",
+      "imagePath": "images/styles/redglaze.jpg",
+      "colorPalette": ["#FFFFFF", "#D32F2F", "#FFD700", "#228B22"],
+      "technique": "저온 소성의 상감 기법",
+      "description": "아리타에서 개발한 특색 있는 기법. 조선의 전통과 일본의 감각이 어우러진 작품으로 높은 예술성을 인정받았습니다."
+    },
+    {
+      "id": 3,
+      "name": "칠보자기 (Imari Style)",
+      "koreanName": "칠보자기",
+      "characteristics": "청화, 적회, 금색을 함께 사용한 화려한 스타일",
+      "period": "17세기 말-18세기",
+      "origin": "아리타 발명",
+      "imagePath": "images/styles/imari.jpg",
+      "colorPalette": ["#FFFFFF", "#002B7E", "#D32F2F", "#FFD700"],
+      "technique": "세 번의 소성 과정",
+      "description": "아리타의 최고 기술이 담긴 스타일. 유럽 귀족들에게 가장 선호되었으며 '일본 칠보'로 불리며 높은 값에 거래되었습니다."
+    },
+    {
+      "id": 4,
+      "name": "나라시키 (Narashiki)",
+      "koreanName": "나라시키",
+      "characteristics": "세련된 패턴과 우아한 형태의 다색 도자",
+      "period": "17세기 중반-18세기",
+      "origin": "조선 전통의 계승",
+      "imagePath": "images/styles/narashiki.jpg",
+      "colorPalette": ["#FFFFFF", "#1A1A1A", "#8B4513", "#CCCCCC"],
+      "technique": "섬세한 손 그리기 기법",
+      "description": "조선의 분청사기 전통을 이어받아 아리타에서 완성된 기법. 차분하면서도 정교한 아름다움이 특징입니다."
+    }
+  ],
+  "timeline": [
+    {
+      "year": 1592,
+      "event": "임진왜란 발발",
+      "description": "조선의 많은 도공들이 도일(일본으로 이주)하기 시작"
+    },
+    {
+      "year": 1616,
+      "event": "아리타에서 자기 생산 시작",
+      "description": "조선 도공들의 기술로 일본 최초 도자 생산 개시"
+    },
+    {
+      "year": 1630,
+      "event": "이삼평의 활동 절정",
+      "description": "붉은 색 문양 기법 발전, 아리타 자기의 기초 확립"
+    },
+    {
+      "year": 1650,
+      "event": "해외 수출 본격화",
+      "description": "네덜란드 동인도회사를 통해 유럽 시장 개척"
+    },
+    {
+      "year": 1670,
+      "event": "칠보자기 개발",
+      "description": "적회, 청화, 금색을 함께 사용한 화려한 기법 완성"
+    },
+    {
+      "year": 1720,
+      "event": "아리타 자기의 국제적 명성 정점",
+      "description": "유럽 귀족들 사이에서 일본 도자 붐 형성"
+    },
+    {
+      "year": 1730,
+      "event": "도공 세대 교체",
+      "description": "초대 조선 도공들의 세대 교체, 2, 3세대 도공들의 활동 시작"
+    },
+    {
+      "year": 1750,
+      "event": "국내 수요 증가",
+      "description": "일본 국내 시장에서의 아리타 자기 수요 급증"
+    }
+  ],
+  "migrationRoutes": [
+    {
+      "route": "조선 → 규슈",
+      "startPoint": "조선 진안/전주 일대",
+      "endPoint": "규슈 가라쓰",
+      "distance": "약 200km",
+      "period": "1590s-1610s",
+      "potters": ["이삼평", "석우", "임나"],
+      "means": "해로(배)",
+      "duration": "2-3일"
+    },
+    {
+      "route": "규슈 → 아리타",
+      "startPoint": "규슈 가라쓰/하마도",
+      "endPoint": "규슈 아리타",
+      "distance": "약 50km",
+      "period": "1610s-1640s",
+      "potters": ["이삼평", "석우", "임나"],
+      "means": "육로 및 해로",
+      "duration": "1-2일"
+    }
+  ],
+  "historicalContext": {
+    "title": "조선 도공의 강제 이주와 아리타 자기의 탄생",
+    "summary": "임진왜란(1592-1598)으로 시작된 조선과 일본의 전쟁 속에서 일본군은 한국의 도공들을 포로로 잡아 규슈로 강제 이주시켰습니다. 이들은 규슈의 가라쓰와 아리타에 정착하여 자신들의 도자 기술을 전수하게 됩니다.",
+    "keyPoints": [
+      "조선의 우수한 도자 기술이 일본으로 전수됨",
+      "도공들의 강제 이주가 일본 도자 산업의 발전을 가져옴",
+      "조선과 일본 도자 문화의 융합으로 새로운 미학 창출",
+      "아리타 자기가 17-18세기 국제 무역의 중요한 상품이 됨",
+      "조선 도공들의 이름과 업적이 역사 속에 묻혀감"
+    ],
+    "sources": [
+      "아리타 도자 역사 자료관",
+      "규슈 도자 문화 연구소",
+      "조선 도자 문화 연구원"
+    ]
+  }
+}
