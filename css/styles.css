@@ -15,7 +15,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Section 1: Hero Section - 아리타 자기 전시 */
+/* ==================== 공통 스타일 ==================== */
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+/* ==================== Section 1: Hero Section ==================== */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -32,12 +39,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    text-align: center;
 }
 
-#pottery-svg {
+.hero-image {
     width: 300px;
     height: 400px;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     animation: fadeInScale 1.5s ease-out;
 }
 
@@ -52,17 +62,7 @@ body {
     }
 }
 
-.pottery {
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.08));
-}
-
-.pattern {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
 .pottery-info {
-    text-align: center;
     animation: fadeIn 2s ease-out 0.5s both;
 }
 
@@ -78,6 +78,14 @@ body {
     font-size: 1rem;
     color: #888;
     font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#pottery-desc {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300;
+    font-style: italic;
 }
 
 @keyframes fadeIn {
@@ -89,12 +97,13 @@ body {
     }
 }
 
-/* Section 2: 균열 섹션 */
+/* ==================== Section 2: Crack Section ==================== */
 .crack-section {
-    height: 200vh;
+    min-height: 200vh;
     position: relative;
     background: linear-gradient(to bottom, #fef5e7 0%, #f5ede0 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
@@ -106,12 +115,22 @@ body {
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    max-height: 600px;
 }
 
-/* Section 3: 지도 섹션 */
+.crack-info {
+    margin-top: 3rem;
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* ==================== Section 3: Map Section ==================== */
 .map-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #f5ede0 0%, #fef5e7 100%);
@@ -119,35 +138,34 @@ body {
     position: relative;
 }
 
+.map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
 .map-container {
     width: 100%;
-    max-width: 1200px;
-    aspect-ratio: 16 / 9;
+    max-width: 1000px;
 }
 
 #migration-map {
     width: 100%;
-    height: 100%;
+    height: auto;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    min-height: 400px;
 }
 
 #map-regions polygon,
 #map-regions circle {
     transition: fill 0.3s ease;
-}
-
-#joseon {
     cursor: pointer;
 }
 
-#joseon:hover {
-    fill: #d4c4b9;
-}
-
-#kyushu {
-    cursor: pointer;
-}
-
+#joseon:hover,
 #kyushu:hover {
     fill: #d4c4b9;
 }
@@ -167,10 +185,9 @@ body {
     }
 }
 
-#route-line {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: drawPath 3s ease-in-out forwards;
+#route-1,
+#route-2 {
+    animation: drawPath 4s ease-in-out forwards;
 }
 
 @keyframes drawPath {
@@ -186,71 +203,254 @@ body {
     animation: fadeIn 1s ease-out 2s both;
 }
 
-/* Section 4: 최종 섹션 */
+/* ==================== Section 4: Final Section ==================== */
 .final-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(135deg, #fef5e7 0%, #f5ede0 100%);
     padding: 4rem 2rem;
-    gap: 3rem;
+}
+
+.final-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
 }
 
 .reassembled-pottery {
+    text-align: center;
+}
+
+.final-image {
     width: 100%;
-    max-width: 600px;
-    aspect-ratio: 6 / 7;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: fadeInScale 1.5s ease-out;
 }
 
-#reassembled-svg {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+.potters-memorial {
+    padding: 2rem;
 }
 
-.pottery-piece {
-    transition: transform 0.3s ease;
+.potters-memorial h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.05em;
 }
 
-.pottery-piece:hover {
-    transform: translateY(-5px);
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+.potter-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.crack-annotations text {
-    font-size: 12px;
-    font-family: 'Noto Serif KR', serif;
-    fill: #333;
-    font-weight: 500;
+.potter-card {
+    background: white;
+    border: 2px solid #e8d5c4;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.potter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #d32f2f;
+}
+
+.potter-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.potter-card p {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.potter-card p.description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e8d5c4;
 }
 
 .credits {
     text-align: center;
-    animation: fadeIn 1.5s ease-out 1s both;
-}
-
-.credits h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
+    padding: 2rem;
+    background: rgba(211, 47, 47, 0.05);
+    border-left: 4px solid #d32f2f;
+    border-radius: 4px;
+    margin-top: 2rem;
 }
 
 .credits p {
     font-size: 1.1rem;
-    color: #666;
+    color: #333;
+    font-style: italic;
     font-weight: 300;
 }
 
-/* 반응형 디자인 */
+/* ==================== Gallery Section ==================== */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border: 1px solid #e8d5c4;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-color: #d32f2f;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.gallery-item p {
+    font-size: 0.95rem;
+    color: #888;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* ==================== 스크롤 표시기 ==================== */
+.scroll-indicator {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+.scroll-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.scroll-dot.active {
+    background-color: #d32f2f;
+    transform: scale(1.3);
+}
+
+/* ==================== 음악 토글 버튼 ==================== */
+.music-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(211, 47, 47, 0.9);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-toggle:hover {
+    background: rgba(211, 47, 47, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.music-toggle.playing {
+    animation: pulse-music 1s ease-in-out infinite;
+}
+
+@keyframes pulse-music {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(211, 47, 47, 0.6);
+    }
+}
+
+/* ==================== 반응형 디자인 ==================== */
+@media (max-width: 1024px) {
+    .final-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .potter-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section {
         height: 80vh;
     }
 
-    #pottery-svg {
+    .hero-image {
         width: 250px;
         height: 350px;
     }
@@ -264,6 +464,10 @@ body {
         min-height: 100vh;
     }
 
+    .map-section h2 {
+        font-size: 2rem;
+    }
+
     .crack-section {
         height: auto;
         min-height: 150vh;
@@ -274,17 +478,33 @@ body {
         width: 100%;
     }
 
-    .final-section {
-        padding: 2rem 1rem;
+    .potter-list {
+        grid-template-columns: 1fr;
     }
 
-    .reassembled-pottery {
-        max-width: 100%;
+    .potters-memorial h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .music-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 1rem;
+        right: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    #pottery-svg {
+    .hero-image {
         width: 200px;
         height: 280px;
     }
@@ -293,16 +513,30 @@ body {
         font-size: 1.5rem;
     }
 
-    .credits h3 {
-        font-size: 1.5rem;
+    .potter-card h3 {
+        font-size: 1.1rem;
     }
 
-    .credits p {
-        font-size: 0.95rem;
+    .potters-memorial h2 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .music-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
     }
 }
 
-/* 스크롤 애니메이션 트리거 */
+/* ==================== 애니메이션 트리거 ==================== */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -314,7 +548,7 @@ body {
     transform: translateY(0);
 }
 
-/* 텍스트 선택 방지 (드래그 상호작용 중) */
+/* ==================== 텍스트 선택 방지 ==================== */
 .no-select {
     user-select: none;
     -webkit-user-select: none;
@@ -322,13 +556,52 @@ body {
     -ms-user-select: none;
 }
 
-/* 부드러운 스크롤 전환 */
-section {
-    position: relative;
-    width: 100%;
-}
-
-/* 캔버스 최적화 */
+/* ==================== Canvas 최적화 ==================== */
 canvas {
     image-rendering: crisp-edges;
+    display: block;
+}
+
+/* ==================== SVG 텍스트 스타일 ==================== */
+#migration-map text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* ==================== 스크롤 바 스타일 ==================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d32f2f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a02424;
+}
+
+/* ==================== 포커스 스타일 ==================== */
+button:focus,
+a:focus {
+    outline: 2px solid #d32f2f;
+    outline-offset: 2px;
+}
+
+/* ==================== 인쇄 스타일 ==================== */
+@media print {
+    .scroll-indicator,
+    .music-toggle {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
 }
