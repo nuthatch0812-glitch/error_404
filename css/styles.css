@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+    background-color: #fef5e7;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Section 1: Hero Section - 아리타 자기 전시 */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fef5e7 0%, #f5ede0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.pottery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#pottery-svg {
+    width: 300px;
+    height: 400px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    animation: fadeInScale 1.5s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pottery {
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.08));
+}
+
+.pattern {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.pottery-info {
+    text-align: center;
+    animation: fadeIn 2s ease-out 0.5s both;
+}
+
+#pottery-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#pottery-date {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 300;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section 2: 균열 섹션 */
+.crack-section {
+    height: 200vh;
+    position: relative;
+    background: linear-gradient(to bottom, #fef5e7 0%, #f5ede0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+#crack-canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* Section 3: 지도 섹션 */
+.map-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5ede0 0%, #fef5e7 100%);
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+}
+
+#migration-map {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+#map-regions polygon,
+#map-regions circle {
+    transition: fill 0.3s ease;
+}
+
+#joseon {
+    cursor: pointer;
+}
+
+#joseon:hover {
+    fill: #d4c4b9;
+}
+
+#kyushu {
+    cursor: pointer;
+}
+
+#kyushu:hover {
+    fill: #d4c4b9;
+}
+
+#arita {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        r: 15px;
+        opacity: 1;
+    }
+    50% {
+        r: 20px;
+        opacity: 0.7;
+    }
+}
+
+#route-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 3s ease-in-out forwards;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.info-labels text {
+    font-size: 14px;
+    font-family: 'Noto Serif KR', serif;
+    fill: #333;
+    animation: fadeIn 1s ease-out 2s both;
+}
+
+/* Section 4: 최종 섹션 */
+.final-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fef5e7 0%, #f5ede0 100%);
+    padding: 4rem 2rem;
+    gap: 3rem;
+}
+
+.reassembled-pottery {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 6 / 7;
+}
+
+#reassembled-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.pottery-piece {
+    transition: transform 0.3s ease;
+}
+
+.pottery-piece:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+}
+
+.crack-annotations text {
+    font-size: 12px;
+    font-family: 'Noto Serif KR', serif;
+    fill: #333;
+    font-weight: 500;
+}
+
+.credits {
+    text-align: center;
+    animation: fadeIn 1.5s ease-out 1s both;
+}
+
+.credits h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.credits p {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+
+    #pottery-svg {
+        width: 250px;
+        height: 350px;
+    }
+
+    #pottery-title {
+        font-size: 2rem;
+    }
+
+    .map-section {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .crack-section {
+        height: auto;
+        min-height: 150vh;
+    }
+
+    #crack-canvas {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .final-section {
+        padding: 2rem 1rem;
+    }
+
+    .reassembled-pottery {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #pottery-svg {
+        width: 200px;
+        height: 280px;
+    }
+
+    #pottery-title {
+        font-size: 1.5rem;
+    }
+
+    .credits h3 {
+        font-size: 1.5rem;
+    }
+
+    .credits p {
+        font-size: 0.95rem;
+    }
+}
+
+/* 스크롤 애니메이션 트리거 */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 텍스트 선택 방지 (드래그 상호작용 중) */
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 부드러운 스크롤 전환 */
+section {
+    position: relative;
+    width: 100%;
+}
+
+/* 캔버스 최적화 */
+canvas {
+    image-rendering: crisp-edges;
+}
